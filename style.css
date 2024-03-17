@@ -219,11 +219,10 @@ html{
 }
 .habilidades .contenido-seccion .fila-habilidades ul li{
     list-style: none;
-   margin-bottom: 25px;
+    margin-bottom: 25px;
    
 }
 .habilidades .contenido-seccion .fila-habilidades .conteiner{
-    border: #000000 solid 1px;
     width: 150px;
     height: 150px;
     margin: 2em;
@@ -267,14 +266,35 @@ html{
     width: 100%;
     height: 90%;
 }
+.proyectos .card .tech{
+   
+    display: inline-flex;
+    margin: 10px 10px;
+    
+}
 
-.proyectos .card:hover{
+.proyectos .card .tech p{
+    margin: 5px 5px;
+    background-color: #000000;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #fff;
+
+}
+.proyectos .card .tech p:hover{
+    background-color: #940253;
+    color: #fff;
+    border: #000000 1px solid;
+}
+
+/*.proyectos .card:hover{
     transition:0.5s ;
     width: 350px;
     height: 300px;
     box-shadow: 0 0 35px #000000;
 }
-
+*/
 /*CONTACTO*/
 
 .contacto{
@@ -283,6 +303,7 @@ html{
     padding: 140px 0 100 0;
     text-align: center;
     top: 0;
+    margin-top: 20px;
 }
 .contacto .contenido-seccion{
     max-width: 1000px;
@@ -330,7 +351,7 @@ html{
 }
 
 
-@media (min-width: 1px) and (max-width: 700px){
+@media (max-width: 700px){
     body{
         display: grid;
         grid-template-areas: 
@@ -342,6 +363,7 @@ html{
         "col2"
         "proyectos"
         "contacto";
+        justify-content: center;
     }
     .inicio{
         grid-area: inicio;
@@ -354,9 +376,15 @@ html{
     }
     .habilidades{
         grid-area:habilidades ;
+        display: flex;
+        
+    }
+    .habilidades .contenido-seccion .fila-habilidades{
+        justify-content: center;
     }
     .habilidades .contenido-seccion .fila-habilidades .col1{
         grid-area: col1;
+        justify-content: center;
     }
     .habilidades .contenido-seccion .fila-habilidades .col2{
         grid-area: col2;
@@ -364,7 +392,13 @@ html{
     .proyectos{
         grid-area: proyectos;
     }
+    .proyectos .contenido-seccion{
+        flex-direction: column;
+    }
     .contacto{
         grid-area:contacto;
+    }
+    .contacto .contenido-seccion .fila{
+        flex-direction: column;
     }
 }
